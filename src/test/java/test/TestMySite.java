@@ -45,6 +45,18 @@ public class TestMySite {
         driver.get(URL);
     }
 
+    @Test
+    public void inputTextSeleniumLocalPage() {
+        driver.get(URL);
+        driver.findElement(By.id("name_input")).sendKeys("Kamaz");
+        driver.findElement(By.id("modell_input")).sendKeys("/img/1.jpg");
+        driver.findElement(By.id("marka_input")).sendKeys("VAZ");
+        driver.findElement(By.id("gruz_input")).sendKeys("1500");
+        driver.findElement(By.id("massa_input")).sendKeys("300000");
+        driver.findElement(By.id("dvig_input")).sendKeys("130");
+        driver.findElement(By.id("cost_input")).sendKeys("15000");
+    }
+
     @AfterClass
     public static void tearDown() {
         driver.quit();
