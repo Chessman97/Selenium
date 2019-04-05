@@ -46,7 +46,7 @@ public class TestMySite {
     }
 
     @Test
-    public void inputTextSeleniumLocalPage() {
+    public void inputTextAndPressButtonSeleniumLocalPage() {
         driver.get(URL);
         driver.findElement(By.id("name_input")).sendKeys("Kamaz");
         driver.findElement(By.id("modell_input")).sendKeys("/img/1.jpg");
@@ -55,7 +55,9 @@ public class TestMySite {
         driver.findElement(By.id("massa_input")).sendKeys("300000");
         driver.findElement(By.id("dvig_input")).sendKeys("130");
         driver.findElement(By.id("cost_input")).sendKeys("15000");
+        driver.findElement(By.id("save_button")).click();
     }
+
 
     @AfterClass
     public static void tearDown() {
