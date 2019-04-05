@@ -58,6 +58,14 @@ public class TestMySite {
         driver.findElement(By.id("save_button")).click();
     }
 
+    @Test
+    public void searchObjects(){
+        driver.get(URL + "catalog/");
+        String header = driver.findElement(By.id("nameform")).getText();
+        System.out.println(header);
+        Assert.assertEquals(header, "Kamaz");
+    }
+
 
     @AfterClass
     public static void tearDown() {
